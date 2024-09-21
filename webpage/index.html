@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Century 21 Replica</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="login-Page" href="project practice/login form/login.html">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="left-links">
+                <a href="#">EAZY PG</a> |
+                <a href="#">FIND YOUR FAVOURITE</a> |
+                <a href="#">LUXURY HOMES</a> |
+                <a href="#">GLOBAL</a>
+            </div>
+        </div>
+        <div class="second-bar">
+            <div class="right-links">
+                <span>866.732.6139</span> |
+                <a href="project practice/login form/login.html">Sign In</a> |
+                <a href="project practice/login form/signup.html">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="overlay">
+            <div class="pic">
+                <img src="image.png" alt="Our detail Image">
+            </div>
+            <form class="search-form" id="searchForm">
+                <input type="text" name="location" placeholder="Enter city, neighborhood, ZIP, address, or MLS #" />
+                
+                <div class="price-range">
+                    <label>Price From
+                        <select name="priceFrom">
+                            <option value="Any">Any</option>
+                            <option value="6000">6,000rs</option>
+                            <option value="7000">7,000rs</option>
+                            <option value="8000">8,000rs</option>
+                        </select>
+                    </label>
+                    <label>To
+                        <select name="priceTo">
+                            <option value="Any">Any</option>
+                            <option value="5000">5,000rs</option>
+                            <option value="7000">7,000rs</option>
+                            <option value="6000">6,000rs</option>
+                        </select>
+                    </label>
+                </div>
+                
+                <div class="beds-baths">
+                    <label>Beds
+                        <select name="beds">
+                            <option value="Any">Any</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </label>
+                    <label>Baths
+                        <select name="baths">
+                            <option value="Any">Any</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </label>
+                </div>
+                
+                <button type="button" onclick="searchPG()">Search eazyPG</button>
+            </form>
+            <script>
+                function searchPG() {
+                  // Get form values
+                  const location = document.querySelector("input[name='location']").value;
+                  const priceFrom = document.querySelector("select[name='priceFrom']").value;
+                  const priceTo = document.querySelector("select[name='priceTo']").value;
+                  const beds = document.querySelector("select[name='beds']").value;
+                  const baths = document.querySelector("select[name='baths']").value;
+                  
+                  // Make API request to the server
+                  fetch(`/search-pg?location=${location}&priceFrom=${priceFrom}&priceTo=${priceTo}&beds=${beds}&baths=${baths}`)
+                    .then(response => response.json())
+                    .then(data => {
+                      console.log(data);  // Handle the response data (display the results on the page)
+                      // You can dynamically update the page to show filtered PG options
+                    });
+                }
+              </script>
+        </div>
+    </section>
+    <footer >
+    <div class="foot-panel1">
+        Back Top
+    </div>
+    <div class="footer">
+        <div class="social-media">
+            <!-- Icons with hover effects -->
+            <div class="icon">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Logo_Twitter.png" alt="Twitter Icon">
+            </div>
+            <div class="icon">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Icon">
+            </div>
+            <div class="icon">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Icon">
+            </div>
+            <div class="icon">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="Dribbble Icon">
+            </div>
+            
+        </div>
+    
+        <!-- Footer Links -->
+       
+    </div>
+    <div class="footer-links2">
+        <ul>
+            <p>About Us</p>
+            <a>career</a>
+            <a>blog</a>
+            <a>about</a>
+        </ul>
+        <ul>
+            <p>Contact Information</p>
+            <a>+91 7309058513</a>
+            <a>+91 6201733513</a>
+            <a>+91 8637809050</a>
+        </ul>
+        <ul>
+            <p>Locations</p>
+            <a>Harohalli kanakpura Road, Ramnagara</a>
+            
+            
+        </ul>
+
+        <ul>
+            <p>Sitemap</p>
+            <a>https://www.eazyPG.com</a>
+            
+            
+        </ul>
+        <ul>
+            <p>Terms of Use</p>
+            <a>career</a>
+            <a>blog</a>
+            <a>about</a>
+        </ul>
+        <ul>
+            <p>Privacy policy</p>
+            <a>career</a>
+            <a>blog</a>
+            <a>about</a>
+        </ul>
+        <ul>
+            <p>Customer Reviews</p>
+            <a>career</a>
+            <a>blog</a>
+            <a>about</a>
+        </ul>
+    </div> 
+    </footer>
+</body>
+</html>

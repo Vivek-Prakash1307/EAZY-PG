@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FabHotel Phoenix Resorts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #f8f9fa;
+            border-bottom: 1px solid #ddd;
+        }
+        header .nav-links {
+            display: flex;
+            gap: 15px;
+        }
+        header a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        /* Main Content Layout */
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 10px;
+        }
+
+        /* Hotel Info Section */
+        .hotel-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .hotel-images {
+            flex: 2;
+        }
+        .hotel-images img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .hotel-info {
+            flex: 1;
+        }
+        .hotel-info h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .rating {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .rating div {
+            background-color: #4caf50;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        .booking-section {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .booking-section h3 {
+            margin-bottom: 10px;
+        }
+        .booking-section button {
+            background-color: #f5a623;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Amenities section */
+        .amenities {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        .amenities div {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        /* About Section */
+        .about-section {
+            margin-top: 40px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .about-section h2 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+        .about-section p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        .about-section ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hotel-container {
+                flex-direction: column;
+            }
+            header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .nav-links {
+                flex-direction: column;
+                align-items: center;
+            }
+            .amenities {
+                flex-direction: column;
+            }
+        }
+        @media (max-width: 576px) {
+            .booking-section button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div><strong>fabHOTELS</strong></div>
+        <nav class="nav-links">
+            <a href="#">All Cities</a>
+            <a href="#">Download App</a>
+            <a href="#">Corporate Enquiry</a>
+            <a href="#">Refer & Earn</a>
+            <a href="#">Sign Up</a>
+            <a href="#">Log In</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Hotel Information -->
+        <div class="hotel-container">
+            <!-- Hotel Images -->
+            <div class="hotel-images">
+                <img src="https://via.placeholder.com/600x400" alt="Hotel Image">
+            </div>
+
+            <!-- Hotel Info -->
+            <div class="hotel-info">
+                <h1>FabHotel Phoenix Resorts</h1>
+                <p>MG Road, Bangalore</p>
+                <div class="rating">
+                    <div>4.6</div>
+                    <span>Fabulous</span> <span>404 Reviews</span>
+                </div>
+
+                <!-- Booking Section -->
+                <div class="booking-section">
+                    <h3>Your Stay Details</h3>
+                    <p>1 x Deluxe Room for 1 Guest</p>
+                    <p><strong>₹1,640</strong> (Ex. GST)</p>
+                    <button>Book Now</button>
+                </div>
+
+                <!-- Amenities -->
+                <div class="amenities">
+                    <div><span>📶</span> High Speed Wi-Fi</div>
+                    <div><span>🛏️</span> Well-equipped Rooms</div>
+                    <div><span>🍽️</span> Healthy Food</div>
+                    <div><span>✨</span> 100% Hygiene</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Section -->
+        <div class="about-section">
+            <h2>About FabHotel Phoenix Resorts, MG Road, Bangalore</h2>
+            <p>Strategically located 600 metres from Commercial Street, 1.1 km from Chinnaswamy Stadium and 1.7 km from Brigade Road, FabHotel Phoenix Resorts is the best budget hotel to stay in Bangalore for both business travellers and tourists seeking a comfortable stay. The hotel enjoys easy connectivity to the airport, railway station, popular tourist attractions, major business hubs, and prominent markets. The free cancellation policy and well-equipped rooms make it the best hotel to stay near MG Road.</p>
+            
+            <p><strong>Other perks are:</strong></p>
+            <ul>
+                <li>Pay at hotel option available</li>
+                <li>100% disinfected and hygienic surroundings</li>
+                <li>Excellent guest reviews</li>
+            </ul>
+
+            <h3>Room Features</h3>
+            <p>FabHotel Phoenix Resorts features contemporary rooms with modern amenities like a flat-screen TV, air conditioner and attached bathroom with hot and cold water supply. Further, room service, 24-hour CCTV surveillance for maximum security, round-the-clock power backup and complimentary Wi-Fi access are provided for added convenience. The availability of these amenities makes this hotel the best place to stay near MG Road.</p>
+
+            <h3>Dining and Things to Do</h3>
+            <p>Guests can enjoy delicious breakfast at our hotel that includes dishes from multiple cuisines from around the world. Breakfast is available for all guests in a la carte mode. You can also bring outside food from nearby restaurants.</p>
+
+            <h3>Activities and Nearby Attractions</h3>
+            <p>FabHotel Phoenix Resorts has numerous tourist attractions nearby for guests to enjoy. Guests can visit the famous attractions including...</p>
+        </div>
+    </div>
+
+</body>
+</html>
